@@ -1,0 +1,39 @@
+{
+  "name": "peterls/smsru",
+  "description": "Доработанный PHP-класс для работы с api сервиса [sms.ru](http://sms.ru)",
+  "type": "library",
+  "keywords": [
+    "sms",
+    "sms.ru",
+    "api"
+  ],
+  "homepage": "https://github.com/peterls/sms_ru",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Petr Slobodyanyuk",
+      "email": "support@web-kiborg.ru",
+      "homepage": "https://web-kiborg.ru",
+      "role": "Developer"
+    },
+    {
+      "name": "Aleksandr Zelenin",
+      "email": "aleksandr@zelenin.me",
+      "homepage": "http://zelenin.me",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/peterls/sms_ru/issues",
+    "source": "https://github.com/peterls/sms_ru"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zelenin\\SmsRu\\": ""
+    }
+  },
+  "require": {
+    "php": ">=7.4",
+    "guzzlehttp/guzzle": "^7.2"
+  }
+}
