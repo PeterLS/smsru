@@ -256,7 +256,7 @@ class Api {
    * @return ClientInterface
    */
   public function getClient(): ClientInterface {
-    if ($this->client === NULL) {
+    if (empty($this->client)) {
       $this->client = new Client();
     }
 
