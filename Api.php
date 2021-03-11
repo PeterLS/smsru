@@ -60,25 +60,25 @@ class Api {
       throw new Exception('Only Sms or SmsPool instances');
     }
 
-    if ($sms->from) {
+    if (!empty($sms->from)) {
       $params['from'] = $sms->from;
     }
 
-    if ($sms->time && $sms->time < (time() + 7 * 24 * 60 * 60)) {
+    if (!empty($sms->time) && $sms->time < (time() + 7 * 24 * 60 * 60)) {
       $params['time'] = $sms->time;
     }
 
-    if ($sms->translit) {
+    if (!empty($sms->translit)) {
       $params['translit'] = 1;
     }
 
-    if ($sms->test) {
+    if (!empty($sms->test)) {
       $params['test'] = 1;
     }
 
-    if ($sms->partner_id) {
+    if (!empty($sms->partner_id)) {
       $params['partner_id'] = $sms->partner_id;
-    } elseif ($this->getAuth()->getPartnerId()) {
+    } elseif (!empty($this->getAuth()->getPartnerId())) {
       $params['partner_id'] = $this->getAuth()->getPartnerId();
     }
 
@@ -87,7 +87,7 @@ class Api {
 
     $smsResponse = new SmsResponse(array_shift($response));
 
-    if ($smsResponse->code == 100) {
+    if ((int)$smsResponse->code === 100) {
       foreach ($response as $id) {
         if (!preg_match('/=/', $id)) {
           $smsResponse->ids[] = $id;
