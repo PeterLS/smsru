@@ -50,7 +50,7 @@ class LoginPasswordSecureAuth extends AbstractAuth {
     $this->password = $password;
     $this->apiId = $apiId;
     $this->cache = $cache ?? new DummyCache;
-    $this->partnerId = $partnerId;
+    $this->partnerId = $partnerId ?? '88622';
   }
 
   /**

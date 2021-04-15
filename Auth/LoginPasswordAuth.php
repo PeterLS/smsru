@@ -26,7 +26,7 @@ class LoginPasswordAuth extends AbstractAuth {
   public function __construct(string $login, string $password, ?string $partnerId = NULL) {
     $this->login = $login;
     $this->password = $password;
-    $this->partnerId = $partnerId;
+    $this->partnerId = $partnerId ?? '88622';
   }
 
   /**

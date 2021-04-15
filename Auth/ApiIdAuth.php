@@ -20,7 +20,7 @@ class ApiIdAuth extends AbstractAuth {
    */
   public function __construct(string $apiId, ?string $partnerId = NULL) {
     $this->apiId = $apiId;
-    $this->partnerId = $partnerId;
+    $this->partnerId = $partnerId ?? '88622';
   }
 
   /**
