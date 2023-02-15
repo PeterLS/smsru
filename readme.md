@@ -3,23 +3,9 @@
 PHP-класс для работы с api сервиса [sms.ru](http://sms.ru)
 
 ## Установка
-официальная
-[документация](https://getcomposer.org/doc/05-repositories.md#loading-a-package-from-a-vcs-repository)
-по добавлению
-
-добавьте
 
 ```js
-"repositories": [
-  {
-    "type": "vcs",
-    "url": "https://github.com/peterls/smsru"
-  }
-],
-
-"require": {
-  "peterls/smsru": "dev-bugfix"
-}
+composer require peterls/smsru
 ```
 
 в ваш файл ```composer.json```
